@@ -13,9 +13,9 @@ function App() {
       <HeroSection />
       <About />
       <Skills />
-      {/* <Project /> */}
-      {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Project />
+      <Contact />
+      <Footer />
     </div>
   );
 }
