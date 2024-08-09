@@ -21,21 +21,46 @@ const Header = () => {
           isOpen ? "block" : "hidden"
         } absolute md:static top-16 left-0 w-full md:w-auto bg-dark_blue md:bg-transparent`}
       >
-        <ul className="flex flex-col text-primary mr-40 text-2xl md:flex-row md:gap-24 py-10 md:py-0 ">
-          <li className="hover:scale-105 p-4 md:p-0">
-            <a href="#home" className="hover:text-white">Home</a>
+        <ul className="flex flex-col text-primary mr-40 text-2xl md:flex-row md:gap-24 py-10 md:py-0">
+          <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
+            <a
+              href="#home"
+              className="hover:text-white transition duration-300"
+            >
+              Home
+            </a>
           </li>
-          <li className="hover:scale-105 p-4 md:p-0">
-            <a href="#about">About</a>
+          <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
+            <a
+              href="#about"
+              className="hover:text-white transition duration-300"
+            >
+              About
+            </a>
           </li>
-          <li className="hover:scale-105 p-4 md:p-0">
-            <a href="#projects">Projects</a>
+          <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
+            <a
+              href="#projects"
+              className="hover:text-white transition duration-300"
+            >
+              Projects
+            </a>
           </li>
-          <li className="hover:scale-105 p-4 md:p-0">
-            <a href="#skills">Skills</a>
+          <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
+            <a
+              href="#skills"
+              className="hover:text-white transition duration-300"
+            >
+              Skills
+            </a>
           </li>
-          <li className="hover:scale-105 p-4 md:p-0">
-            <a href="#contact">Contact</a>
+          <li className="hover:scale-105 p-4 md:p-0 transition duration-1000">
+            <a
+              href="#contact"
+              className="hover:text-white transition duration-1000"
+            >
+              Contact
+            </a>
           </li>
         </ul>
       </nav>
