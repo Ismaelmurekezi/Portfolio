@@ -73,18 +73,18 @@ const Project = () => {
           onClick={handlePrev}
           className="cursor-pointer absolute left-0 text-white"
         />
-        <div className="flex overflow-hidden w-full justify-around  rounded-xl">
+        <div className="flex overflow-hidden flex-wrap justify-center gap-6 w-full mx-4">
           {projects
             .slice(currentIndex, currentIndex + 3)
             .map((project, index) => (
               <div
                 key={index}
-                className="max-w-[500px] max-h-[400px]  flex flex-col relative bg-dark_blue mx-4 my-7  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:shadow-cyan-500/50 duration-300"
+                className="w-full md:w-[30%] lg:w-[30%] max-h-[400px] flex flex-col relative bg-dark_blue mx-4 my-7 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:shadow-cyan-500/50 duration-300"
               >
                 <img
                   src={project.imgSrc}
                   alt=""
-                  className="max-w-[500px] max-h-[250px]"
+                  className="max-w-full max-h-[250px]"
                   height={350}
                   width={500}
                 />

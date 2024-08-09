@@ -2,53 +2,45 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="flex flex-col  mt-24">
-      <h3 className="pl-[530px] mb-6 text-primary text-3xl font-semibold ">
+    <div className="flex flex-col mt-24 items-center">
+      <h3 className="text-primary text-3xl font-semibold mb-6 text-center md:text-left md:pl-10">
         SKILLS
       </h3>
-      <div className="flex  flex-col items-center gap-20 justify-center m-auto w-[800px] h-[300px]  flex-wrap bg-dark_blue rounded-2xl">
-        <div className="flex items-center gap-16 ">
+      <div className="flex flex-col items-center gap-12 justify-center w-full max-w-4xl px-4 md:px-0 bg-dark_blue rounded-2xl py-10">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-16">
           <div className="flex flex-col items-center">
-            <img src="./html.png" alt="" className="mb-[-35px]" />
-            <p className="">HTML</p>
+            <img src="./html.png" alt="HTML" className="mb-2" />
+            <p className="text-lg">HTML</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="./css.png" alt="" className="mb-[-23px]" />
-            <p>CSS</p>
+            <img src="./css.png" alt="CSS" className="mb-2" />
+            <p className="text-lg">CSS</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="./javascript.png" alt="" className="mb-[-27px]" />
-            <p>Javascript</p>
+            <img src="./javascript.png" alt="Javascript" className="mb-2" />
+            <p className="text-lg">Javascript</p>
           </div>
-          <div className="flex flex-col items-center ">
-            <img src="./ui.png" alt="" className="mb-[-27px]" />
-            <p>Figma</p>
+          <div className="flex flex-col items-center">
+            <img src="./ui.png" alt="Figma" className="mb-2" />
+            <p className="text-lg">Figma</p>
           </div>
         </div>
-        <div className="flex items-center gap-16 ">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-16">
           <div className="flex flex-col items-center">
-            <img src="./mongoDB.png" alt="" className="mt-[-40px] mb-[-27px]" />
-            <p>MongoDB</p>
+            <img src="./mongoDB.png" alt="MongoDB" className="mb-2" />
+            <p className="text-lg">MongoDB</p>
           </div>
           <div className="flex flex-col items-center">
-            <img
-              src="./Express js.png"
-              alt=""
-              className="mt-[-40px] mb-[-27px]"
-            />
-            <p>Express Js</p>
+            <img src="./Express js.png" alt="Express Js" className="mb-2" />
+            <p className="text-lg">Express Js</p>
           </div>
           <div className="flex flex-col items-center">
-            <img
-              src="./postgreSQL.png"
-              alt=""
-              className="mt-[-40px] mb-[-27px]"
-            />
-            <p>PostgreSQL</p>
+            <img src="./postgreSQL.png" alt="PostgreSQL" className="mb-2" />
+            <p className="text-lg">PostgreSQL</p>
           </div>
           <div className="flex flex-col items-center">
-            <img src="./Python.png" alt="" className="mt-[-40px] mb-[-27px]" />
-            <p>Python</p>
+            <img src="./Python.png" alt="Python" className="mb-2" />
+            <p className="text-lg">Python</p>
           </div>
         </div>
       </div>

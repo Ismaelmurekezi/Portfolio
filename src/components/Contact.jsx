@@ -20,8 +20,6 @@ const Contact = () => {
     resolver: yupResolver(messageSchema),
   });
 
-
-
   const onSubmit = async (data) => {
     try {
       const response = await fetch(
@@ -36,85 +34,72 @@ const Contact = () => {
       );
 
       if (response.ok) {
-         toast.success("Thanks, your message was sent successfully!");
-
-        document.getElementById("contact-form");
+        toast.success("Thanks, your message was sent successfully!");
       } else {
         toast.error("Failed to submit message");
       }
     } catch (error) {
       console.error("Error:", error.message);
-       toast.error("An error occurred while sending the message.");
+      toast.error("An error occurred while sending the message.");
     }
   };
 
   return (
-    <div className="pl-16 pb-24 pt-28 bg-black flex justify-around">
-      <div className="">
-        <h3 className="mb-6 text-primary text-2xl font-semibold">CONTACT ME</h3>
-        <div className="flex flex-col gap-2">
+    <div className="pt-24 pb-24 bg-black px-4 md:px-16 lg:px-24">
+      <div className="text-center mb-12">
+        <h3 className="text-primary text-2xl font-semibold">CONTACT ME</h3>
+        <div className="flex flex-col items-center gap-4 mt-6 text-primary text-lg">
           <span>
-            <span className="text-primary pr-3 text-lg">
-              <i class="fa-solid fa-location-dot text-xl pr-2"></i> My Location
-            </span>
-            KN 173 st 24
+            <i className="fa-solid fa-location-dot text-xl pr-2"></i> My
+            Location
+            <br /> KN 173 st 24
           </span>
           <span>
-            <span className="text-primary pr-3 text-lg">
-              <i class="fa-solid fa-phone text-xl pr-2"></i>Contact
-            </span>
-            +250 781530573
+            <i className="fa-solid fa-phone text-xl pr-2"></i> Contact
+            <br /> +250 781530573
           </span>
           <span>
-            <span className="text-primary pr-3 text-lg">
-              <i class="fa-regular fa-envelope text-xl pr-2"></i> Email
-            </span>
-            ismaelmurekezi1@gmail.com
+            <i className="fa-regular fa-envelope text-xl pr-2"></i> Email
+            <br /> ismaelmurekezi1@gmail.com
           </span>
         </div>
       </div>
       <form
-        className="flex flex-col flex-wrap m-auto w-96 gap-2  "
+        className="flex flex-col items-center gap-4 mx-auto max-w-lg"
         onSubmit={handleSubmit(onSubmit)}
       >
-        <div>
+        <div className="w-full">
           <input
             type="text"
             placeholder="Enter your name"
-            className="w-[600px] py-3 border-[1px] border-primary bg-transparent rounded-lg px-4 "
+            className="w-full py-3 border-[1px] border-primary bg-transparent rounded-lg px-4"
             id="contact-name"
             {...register("name")}
           />
-          <small id="name-error" className="text-red-500">
-            {errors.name?.message}
-          </small>
+          <small className="text-red-500">{errors.name?.message}</small>
         </div>
-        <div>
+        <div className="w-full">
           <input
             type="text"
             placeholder="Enter your Email"
-            className="w-[600px] py-3 border-[1px] border-primary bg-transparent rounded-lg px-4 "
+            className="w-full py-3 border-[1px] border-primary bg-transparent rounded-lg px-4"
             id="contact-email"
             {...register("email")}
           />
-          <small id="email-error" className="text-red-500">
-            {errors.email?.message}
-          </small>
+          <small className="text-red-500">{errors.email?.message}</small>
         </div>
-        <div>
+        <div className="w-full">
           <input
             type="text"
             placeholder="Enter your message"
-            className="w-[600px] h-60 border-[1px] border-primary bg-transparent rounded-lg px-4  "
+            className="w-full h-60 py-3 border-[1px] border-primary bg-transparent rounded-lg px-4"
             id="contact-message"
             {...register("message")}
           />
-          <small id="message-error" className="text-red-500">
-            {errors.message?.message}
-          </small>
+          <small className="text-red-500">{errors.message?.message}</small>
         </div>
         <button
-          className="w-[600px] py-3 border-[1px] bg-primary text-white font-medium text-xl border-primary  rounded-lg px-4    "
+          className="w-full py-3 border-[1px] bg-primary text-white font-medium text-xl border-primary rounded-lg"
           id="submit-btn"
         >
           SEND MESSAGE
