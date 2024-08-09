@@ -14,19 +14,19 @@ const Project = () => {
       imgSrc: "/country-app.png",
       title: "Country app",
       siteLink: "https://ismaelmurekezi.github.io/Countries-App/",
-      codeLink: "#",
+      codeLink: "https://github.com/Ismaelmurekezi/Countries-App.git",
     },
     {
       imgSrc: "/calculator1.png",
       title: "Calculator",
       siteLink: "https://ismaelmurekezi.github.io/Calculator/",
-      codeLink: "#",
+      codeLink: "https://github.com/Ismaelmurekezi/Calculator.git",
     },
     {
       imgSrc: "/weatherapp.png",
       title: "Weather app",
       siteLink: "https://ismaelmurekezi.github.io/Weather-App/",
-      codeLink: "#",
+      codeLink: "https://github.com/Ismaelmurekezi/Weather-App.git",
     },
     {
       imgSrc: "/Etch-a-sketch.png",
@@ -39,6 +39,12 @@ const Project = () => {
       title: "Slack login UI",
       siteLink: "https://ismaelmurekezi.github.io/slack-login/",
       codeLink: "https://github.com/Ismaelmurekezi/slack-login.git",
+    },
+    {
+      imgSrc: "/Admin dashboard.png",
+      title: "Iwork",
+      siteLink: "#",
+      codeLink: "https://github.com/Ismaelmurekezi/Iwork.git",
     },
   ];
 
@@ -67,13 +73,13 @@ const Project = () => {
           onClick={handlePrev}
           className="cursor-pointer absolute left-0 text-white"
         />
-        <div className="flex overflow-hidden w-full justify-around">
+        <div className="flex overflow-hidden w-full justify-around  rounded-xl">
           {projects
             .slice(currentIndex, currentIndex + 3)
             .map((project, index) => (
               <div
                 key={index}
-                className="max-w-[500px] max-h-[400px] flex flex-col relative bg-dark_blue mx-4 my-7"
+                className="max-w-[500px] max-h-[400px]  flex flex-col relative bg-dark_blue mx-4 my-7  transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:shadow-cyan-500/50 duration-300"
               >
                 <img
                   src={project.imgSrc}
@@ -87,15 +93,13 @@ const Project = () => {
                 </p>
                 <button className="w-56 my-3 h-11 rounded-lg text-primary border-[1px] border-primary ml-4 hover:bg-primary hover:text-white">
                   <a href={project.siteLink}>
-                   
                     Visit site<i className="fa-solid fa-arrow-right pl-4"></i>
                   </a>
                 </button>
-                <div className="self-end absolute bottom-4">
+                <div className="self-end absolute bottom-4 hover:text-primary">
                   <a href={project.codeLink}>
-                  <i className="fa-brands fa-github text-xl"></i>
-                  <span className="px-3">View code</span>
-
+                    <i className="fa-brands fa-github text-xl"></i>
+                    <span className="px-3">View code</span>
                   </a>
                 </div>
               </div>

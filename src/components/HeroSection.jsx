@@ -14,15 +14,24 @@ const HeroSection = () => {
           development.
         </p>
         <span className="text-primary text-xl">Get in touch</span>
-        <div className="flex gap-4 text-primary text-4xl pt-4 ">
-          <a href="https://www.linkedin.com/in/murekezi-ismael/ ">
-            <i className="fab fa-linkedin " ></i>
+        <div className="flex gap-4 text-primary text-4xl pt-4">
+          <a
+            href="https://www.linkedin.com/in/murekezi-ismael/"
+            className="group relative inline-flex items-center justify-center w-16 h-16 rounded-full hover:bg-white hover:bg-opacity-10 transition ease-in-out duration-300"
+          >
+            <i className="fab fa-linkedin group-hover:text-white transition ease-in-out duration-300"></i>
           </a>
-          <a href="https://github.com/Ismaelmurekezi">
-            <i className="fab fa-github"></i>
+          <a
+            href="https://github.com/Ismaelmurekezi"
+            className="group relative inline-flex items-center justify-center w-16 h-16 rounded-full hover:bg-white hover:bg-opacity-10 transition ease-in-out duration-300"
+          >
+            <i className="fab fa-github group-hover:text-white transition ease-in-out duration-300"></i>
           </a>
-          <a href="">
-            <i className="fab fa-twitter-square"></i>
+          <a
+            href="#"
+            className="group relative inline-flex items-center justify-center w-16 h-16 rounded-full hover:bg-white hover:bg-opacity-10 transition ease-in-out duration-300"
+          >
+            <i className="fab fa-twitter-square group-hover:text-white transition ease-in-out duration-300"></i>
           </a>
         </div>
       </div>
@@ -30,7 +39,7 @@ const HeroSection = () => {
         src="./profile.png"
         alt="my-image"
         width={250}
-        className="rounded-full"
+        className="rounded-full transition ease-in-out duration-300 hover:shadow-primary"
       />
     </div>
   );

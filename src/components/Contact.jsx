@@ -1,6 +1,53 @@
-import React from 'react'
+import React from "react";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const messageSchema = yup.object().shape({
+    name: yup.string().required(),
+    email: yup.string().email().required(),
+    message: yup.string().min(30).required(),
+  });
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(messageSchema),
+  });
+
+
+
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch(
+        "https://my-brand-backend-ibtm.onrender.com/api/messages/createMessage",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
+
+      if (response.ok) {
+         toast.success("Thanks, your message was sent successfully!");
+
+        document.getElementById("contact-form");
+      } else {
+        toast.error("Failed to submit message");
+      }
+    } catch (error) {
+      console.error("Error:", error.message);
+       toast.error("An error occurred while sending the message.");
+    }
+  };
+
   return (
     <div className="pl-16 pb-24 pt-28 bg-black flex justify-around">
       <div className="">
@@ -26,25 +73,57 @@ const Contact = () => {
           </span>
         </div>
       </div>
-      <div className="flex flex-col flex-wrap m-auto w-96 gap-2  ">
-        <input
-          type="text"
-          placeholder="Enter your name"
-          className="w-[600px] py-3 border-[1px] border-primary bg-transparent rounded-lg px-4 "
-        />
-        <input
-          type="text"
-          placeholder="Enter your Email"
-          className="w-[600px] py-3 border-[1px] border-primary bg-transparent rounded-lg px-4 "
-        />
-        <input
-          type="text"
-          placeholder="Enter your message"
-          className="w-[600px] h-60 border-[1px] border-primary bg-transparent rounded-lg px-4  "
-        />
-      </div>
+      <form
+        className="flex flex-col flex-wrap m-auto w-96 gap-2  "
+        onSubmit={handleSubmit(onSubmit)}
+      >
+        <div>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            className="w-[600px] py-3 border-[1px] border-primary bg-transparent rounded-lg px-4 "
+            id="contact-name"
+            {...register("name")}
+          />
+          <small id="name-error" className="text-red-500">
+            {errors.name?.message}
+          </small>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Enter your Email"
+            className="w-[600px] py-3 border-[1px] border-primary bg-transparent rounded-lg px-4 "
+            id="contact-email"
+            {...register("email")}
+          />
+          <small id="email-error" className="text-red-500">
+            {errors.email?.message}
+          </small>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Enter your message"
+            className="w-[600px] h-60 border-[1px] border-primary bg-transparent rounded-lg px-4  "
+            id="contact-message"
+            {...register("message")}
+          />
+          <small id="message-error" className="text-red-500">
+            {errors.message?.message}
+          </small>
+        </div>
+        <button
+          className="w-[600px] py-3 border-[1px] bg-primary text-white font-medium text-xl border-primary  rounded-lg px-4    "
+          id="submit-btn"
+        >
+          SEND MESSAGE
+        </button>
+        <span id="submit-error"></span>
+      </form>
+      <ToastContainer />
     </div>
   );
-}
+};
 
-export default Contact
+export default Contact;
