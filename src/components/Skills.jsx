@@ -9,7 +9,7 @@ const Skills = () => {
       <div className="flex flex-col items-center gap-12 justify-center w-full max-w-4xl px-4 md:px-0 bg-dark_blue rounded-2xl py-10">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 md:gap-16">
           <div className="flex flex-col items-center">
-            <img src="./html.png" alt="HTML" className="mb-2" />
+            <img src="./html.png" alt="HTML" className="mb-[-10px]" />
             <p className="text-lg">HTML</p>
           </div>
           <div className="flex flex-col items-center">
