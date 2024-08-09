@@ -9,7 +9,7 @@ const Footer = () => {
           alt="logo"
           width={100}
           height={30}
-          className="mb-4"
+          className="mb-4 absolute left-0"
         />
         <div className="flex gap-4 text-primary text-3xl mb-4">
           <a
@@ -31,26 +31,26 @@ const Footer = () => {
             <i className="fab fa-twitter-square group-hover:text-white transition ease-in-out duration-300"></i>
           </a>
         </div>
-        <span className="text-lg text-primary mb-4">Quick links</span>
-        <ul className="flex flex-col md:flex-row gap-6 text-center text-lg mb-4">
+        <span className="flex text-lg text-primary mb-4">Quick links</span>
+        <ul className="flex gap-20 py-2  md:flex-row  text-center text-lg mb-4">
           <li>
-            <a href="#">Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="#">Skills</a>
+            <a href="#skills">Skills</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
-        <span className="text-sm text-primary">
-          &copy; Ismael 2024. All rights Reserved.
+        <span className="text-sm ">
+          Copyright &copy; Ismael 2024. All rights Reserved.
         </span>
       </div>
     </div>

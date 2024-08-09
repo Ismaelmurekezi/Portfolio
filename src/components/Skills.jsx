@@ -2,8 +2,8 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="flex flex-col mt-24 items-center">
-      <h3 className="text-primary text-3xl font-semibold mb-6 text-center md:text-left md:pl-10">
+    <div className="flex flex-col mt-24 items-center" id="skills">
+      <h3 className="text-primary pt-10 text-3xl font-semibold mb-6 text-center md:text-left md:pl-10">
         SKILLS
       </h3>
       <div className="flex flex-col items-center gap-12 justify-center w-full max-w-4xl px-4 md:px-0 bg-dark_blue rounded-2xl py-10">

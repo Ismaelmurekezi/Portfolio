@@ -45,67 +45,77 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-24 pb-24 bg-black px-4 md:px-16 lg:px-24">
-      <div className="text-center mb-12">
-        <h3 className="text-primary text-2xl font-semibold">CONTACT ME</h3>
-        <div className="flex flex-col items-center gap-4 mt-6 text-primary text-lg">
-          <span>
-            <i className="fa-solid fa-location-dot text-xl pr-2"></i> My
-            Location
-            <br /> KN 173 st 24
-          </span>
-          <span>
-            <i className="fa-solid fa-phone text-xl pr-2"></i> Contact
-            <br /> +250 781530573
-          </span>
-          <span>
-            <i className="fa-regular fa-envelope text-xl pr-2"></i> Email
-            <br /> ismaelmurekezi1@gmail.com
-          </span>
+    <div className="pt-24 pb-24 bg-black px-4 md:px-16 lg:px-24" id="contact">
+      <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+        <div className="flex flex-col text-center md:text-left">
+          <h3 className="text-primary text-2xl font-semibold mb-6">
+            CONTACT ME
+          </h3>
+          <div className="flex flex-col gap-2">
+            <span>
+              <span className="text-primary pr-3 text-lg">
+                <i class="fa-solid fa-location-dot text-xl pr-2"></i> My
+                Location
+              </span>
+              KN 173 st 24
+            </span>
+            <span>
+              <span className="text-primary pr-3 text-lg">
+                <i class="fa-solid fa-phone text-xl pr-2"></i>Contact
+              </span>
+              +250 781530573
+            </span>
+            <span>
+              <span className="text-primary pr-3 text-lg">
+                <i class="fa-regular fa-envelope text-xl pr-2"></i> Email
+              </span>
+              ismaelmurekezi1@gmail.com
+            </span>
+          </div>
         </div>
-      </div>
-      <form
-        className="flex flex-col items-center gap-4 mx-auto max-w-lg"
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <div className="w-full">
-          <input
-            type="text"
-            placeholder="Enter your name"
-            className="w-full py-3 border-[1px] border-primary bg-transparent rounded-lg px-4"
-            id="contact-name"
-            {...register("name")}
-          />
-          <small className="text-red-500">{errors.name?.message}</small>
-        </div>
-        <div className="w-full">
-          <input
-            type="text"
-            placeholder="Enter your Email"
-            className="w-full py-3 border-[1px] border-primary bg-transparent rounded-lg px-4"
-            id="contact-email"
-            {...register("email")}
-          />
-          <small className="text-red-500">{errors.email?.message}</small>
-        </div>
-        <div className="w-full">
-          <input
-            type="text"
-            placeholder="Enter your message"
-            className="w-full h-60 py-3 border-[1px] border-primary bg-transparent rounded-lg px-4"
-            id="contact-message"
-            {...register("message")}
-          />
-          <small className="text-red-500">{errors.message?.message}</small>
-        </div>
-        <button
-          className="w-full py-3 border-[1px] bg-primary text-white font-medium text-xl border-primary rounded-lg"
-          id="submit-btn"
+        <form
+          className="flex flex-col gap-4 max-w-lg w-full mx-auto"
+          onSubmit={handleSubmit(onSubmit)}
         >
-          SEND MESSAGE
-        </button>
-        <span id="submit-error"></span>
-      </form>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter your name"
+              className="w-full py-3 border-[1px] border-primary bg-transparent rounded-lg px-4"
+              id="contact-name"
+              {...register("name")}
+            />
+            <small className="text-red-500">{errors.name?.message}</small>
+          </div>
+          <div>
+            <input
+              type="text"
+              placeholder="Enter your Email"
+              className="w-full py-3 border-[1px] border-primary bg-transparent rounded-lg px-4"
+              id="contact-email"
+              {...register("email")}
+            />
+            <small className="text-red-500">{errors.email?.message}</small>
+          </div>
+          <div>
+            <textarea
+              type="text"
+              placeholder="Enter your message"
+              className="w-full h-60 py-3 border-[1px] border-primary bg-transparent rounded-lg px-4"
+              id="contact-message"
+              {...register("message")}
+            />
+            <small className="text-red-500">{errors.message?.message}</small>
+          </div>
+          <button
+            className="w-full py-3 border-[1px] bg-primary text-white font-medium text-xl border-primary rounded-lg"
+            id="submit-btn"
+          >
+            SEND MESSAGE
+          </button>
+          <span id="submit-error"></span>
+        </form>
+      </div>
       <ToastContainer />
     </div>
   );

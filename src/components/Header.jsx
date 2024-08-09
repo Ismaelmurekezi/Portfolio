@@ -21,9 +21,9 @@ const Header = () => {
           isOpen ? "block" : "hidden"
         } absolute md:static top-16 left-0 w-full md:w-auto bg-dark_blue md:bg-transparent`}
       >
-        <ul className="flex flex-col md:flex-row md:gap-24 text-xl py-10 md:py-0">
+        <ul className="flex flex-col text-primary mr-40 text-2xl md:flex-row md:gap-24 py-10 md:py-0 ">
           <li className="hover:scale-105 p-4 md:p-0">
-            <a href="#home">Home</a>
+            <a href="#home" className="hover:text-white">Home</a>
           </li>
           <li className="hover:scale-105 p-4 md:p-0">
             <a href="#about">About</a>

@@ -41,6 +41,12 @@ const Project = () => {
       codeLink: "https://github.com/Ismaelmurekezi/slack-login.git",
     },
     {
+      imgSrc: "/mern-auth.png",
+      title: "MERN AUTH",
+      siteLink: "",
+      codeLink: "https://github.com/Ismaelmurekezi/Auth.git",
+    },
+    {
       imgSrc: "/Admin dashboard.png",
       title: "Iwork",
       siteLink: "#",
@@ -61,7 +67,7 @@ const Project = () => {
   };
 
   return (
-    <div className="mt-28">
+    <div className="mt-28" id="projects">
       <h3 className="pl-20 mb-6 text-primary text-3xl font-semibold">
         PROJECTS
       </h3>
@@ -71,7 +77,7 @@ const Project = () => {
           alt="Previous"
           width={50}
           onClick={handlePrev}
-          className="cursor-pointer absolute left-0 text-white"
+          className="cursor-pointer absolute left-0  z-10 "
         />
         <div className="flex overflow-hidden flex-wrap justify-center gap-6 w-full mx-4">
           {projects
@@ -79,14 +85,14 @@ const Project = () => {
             .map((project, index) => (
               <div
                 key={index}
-                className="w-full md:w-[30%] lg:w-[30%] max-h-[400px] flex flex-col relative bg-dark_blue mx-4 my-7 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:shadow-cyan-500/50 duration-300"
+                className="w-full md:w-[30%] lg:w-[30%] max-h-[400px] flex flex-col relative bg-dark_blue mx-4 my-7 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:shadow-cyan-500/50 duration-300"
               >
                 <img
                   src={project.imgSrc}
                   alt=""
                   className="max-w-full max-h-[250px]"
                   height={350}
-                  width={500}
+                  width={600}
                 />
                 <p className="text-primary text-lg pt-4 font-medium pl-4">
                   {project.title}
@@ -110,7 +116,7 @@ const Project = () => {
           alt="Next"
           width={50}
           onClick={handleNext}
-          className="cursor-pointer absolute right-0"
+          className="cursor-pointer absolute right-0 z-10 "
         />
       </div>
     </div>
