@@ -7,10 +7,10 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <div className="flex justify-between items-center py-4 px-6">
-      <img src="/logo.png" alt="logo" width={100} height={30} />
+    <div className="w-full flex justify-between items-center py-4">
+      <img src="/logo.png" alt="logo" className="" height={40} width={70} />
 
-      <div className="md:hidden z-10">
+      <div className="md:hidden z-10 pr-2">
         <button onClick={toggleMenu} className="focus:outline-none ">
           <i className="fas fa-bars text-2xl"></i>
         </button>
@@ -19,9 +19,9 @@ const Header = () => {
       <nav
         className={`md:flex ${
           isOpen ? "block" : "hidden"
-        } absolute md:static top-16 left-0 w-full md:w-auto bg-dark_blue md:bg-transparent`}
+        } absolute md:static top-[75px] right-2 w-[35%] md:w-auto bg-dark_blue md:bg-transparent`}
       >
-        <ul className="flex flex-col text-primary mr-40 text-2xl md:flex-row md:gap-24 py-10 md:py-0">
+        <ul className="flex flex-col mr-32 text-primary text-xl md:flex-row md:gap-10 md:mr-10 lg:mr-32 lg:gap-24">
           <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
             <a
               href="#home"
