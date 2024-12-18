@@ -6,7 +6,7 @@ const HeroSection = () => {
       className="flex flex-col md:flex-row justify-between px-32 items-center py-10"
       id="home"
     >
-        <div className="w-96  md:w-[50%] flex flex-col items-center gap-2 text-center md:text-left">
+        <div className="w-96  md:w-[50%] flex flex-col items-center  text-center md:text-left md:items-start">
           <p className="text-xl md:text-2xl">Hi, I'm </p>
           <p className="text-primary text-3xl md:text-5xl font-semibold">
             MUREKEZI Ismael

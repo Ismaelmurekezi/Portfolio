@@ -56,6 +56,14 @@ const Header = () => {
           </li>
           <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
             <a
+              href="#services"
+              className="hover:text-white transition duration-300"
+            >
+              Service
+            </a>
+          </li>
+          <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
+            <a
               href="#contact"
               className="hover:text-white transition duration-300"
             >

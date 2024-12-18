@@ -32,20 +32,20 @@ const Footer = () => {
           </a>
         </div>
         <span className="flex text-lg text-primary mb-4">Quick links</span>
-        <ul className="flex gap-20 py-2  md:flex-row  text-center text-lg mb-4">
-          <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
+        <ul className="flex text-sm py-2  md:gap-12 md:text-lg  lg:gap-20 hover:cursor-pointer text-center  mb-4">
+          <li className="hover:scale-105 p-4 hover:text-primary transition duration-300">
             <a href="#home">Home</a>
           </li>
-          <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
+          <li className="hover:scale-105 p-4 hover:text-primary transition duration-300">
             <a href="#about">About</a>
           </li>
-          <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
+          <li className="hover:scale-105 p-4 hover:text-primary transition duration-300">
             <a href="#projects">Projects</a>
           </li>
-          <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
+          <li className="hover:scale-105 p-4 hover:text-primary transition duration-300">
             <a href="#skills">Skills</a>
           </li>
-          <li className="hover:scale-105 p-4 md:p-0 transition duration-300">
+          <li className="hover:scale-105 p-4 hover:text-primary transition duration-300">
             <a href="#contact">Contact</a>
           </li>
         </ul>

@@ -9,9 +9,9 @@ const About = () => {
       <img
         src="/profile.png"
         alt="my-image"
-        className="w-32 md:w-36 rounded-full mb-8 md:mb-0"
+        className="w-32 md:w-[10%] rounded-full mb-8 md:mb-0"
       />
-      <div className="md:w-[60%]">
+      <div className="md:w-[60%] px-12">
         <h4 className="text-xl md:text-2xl text-primary font-medium pb-4">
           About Me
         </h4>
