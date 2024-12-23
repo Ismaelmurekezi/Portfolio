@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className=" text-white py-6 px-4 md:px-16 lg:px-24">
+    <div className=" text-white bg-lightdark px-4 md:px-16 lg:px-24">
       <div className="flex flex-col items-center">
         <img
           src="./logo.png"
@@ -32,7 +32,7 @@ const Footer = () => {
           </a>
         </div>
         <span className="flex text-lg text-primary mb-4">Quick links</span>
-        <ul className="flex text-sm py-2  md:gap-12 md:text-lg  lg:gap-20 hover:cursor-pointer text-center  mb-4">
+        <ul className="flex text-sm py-1  md:gap-12 md:text-lg  lg:gap-12 hover:cursor-pointer text-center  mb-4">
           <li className="hover:scale-105 p-4 hover:text-primary transition duration-300">
             <a href="#home">Home</a>
           </li>

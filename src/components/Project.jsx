@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Project = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -47,41 +48,23 @@ const Project = () => {
       codeLink: "https://github.com/Ismaelmurekezi/Auth.git",
     },
     {
-      imgSrc: "/Admin dashboard.png",
+      imgSrc: "/Admin-dashboard.png",
       title: "Iwork",
       siteLink: "#",
       codeLink: "https://github.com/Ismaelmurekezi/Iwork.git",
     },
   ];
 
-  const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? Math.max(0, projects.length - 3) : prevIndex - 1
-    );
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex >= projects.length - 3 ? 0 : prevIndex + 1
-    );
-  };
 
   return (
-    <div className="mt-28" id="projects">
-      <h3 className="pl-20 mb-6 text-primary text-3xl font-semibold">
+    <div className="flex flex-col items-start  mt-28" id="projects">
+      <h3 className="mb-6 text-primary text-3xl font-semibold">
         PROJECTS
       </h3>
       <div className="relative flex items-center justify-center pb-10 md:m-auto">
-        <img
-          src="/left-arrow.png"
-          alt="Previous"
-          width={30}
-          onClick={handlePrev}
-          className="cursor-pointer absolute left-0  z-10"
-        />
         <div className="flex overflow-hidden flex-wrap justify-center gap-6 w-full mx-4">
           {projects
-            .slice(currentIndex, currentIndex + 3)
+            .slice(currentIndex, currentIndex + 6)
             .map((project, index) => (
               <div
                 key={index}
@@ -109,14 +92,12 @@ const Project = () => {
               </div>
             ))}
         </div>
-        <img
-          src="/right-arrow.png"
-          alt="Next"
-          width={30}
-          onClick={handleNext}
-          className="cursor-pointer absolute right-0 z-10 "
-        />
       </div>
+      <button className="w-36 self-end mb-7 mr-11 h-12 rounded-lg text-primary border-[1px] border-primary ml-4 hover:bg-primary hover:text-white lg:w-40">
+        <Link to="projects">
+          View More<i className="fa-solid fa-arrow-right pl-4"></i>
+        </Link>
+      </button>
     </div>
   );
 };

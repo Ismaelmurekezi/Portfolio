@@ -16,6 +16,7 @@ const Contact = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm({
     resolver: yupResolver(messageSchema),
   });
@@ -35,6 +36,7 @@ const Contact = () => {
 
       if (response.ok) {
         toast.success("Thanks, your message was sent successfully!");
+        reset()
       } else {
         toast.error("Failed to submit message");
       }
