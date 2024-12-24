@@ -110,7 +110,7 @@ const Contact = () => {
             <small className="text-red-500">{errors.message?.message}</small>
           </div>
           <button
-            className="w-full py-3 border-[1px] bg-primary text-white font-medium text-xl border-primary rounded-lg"
+            className="w-full py-3 border-[1px] bg-primary text-white font-medium text-xl border-primary rounded-lg hover:bg-cyan-400"
             id="submit-btn"
           >
             SEND MESSAGE
