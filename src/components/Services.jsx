@@ -2,9 +2,9 @@ import React from 'react'
 
 const Services = () => {
   return (
-    <div className="w-full px-4 pt-10" id='services'>
-      <h1 className="text-2xl font-bold text-primary xl:pl-32">SERVICES</h1>
-      <div className="flex flex-col gap-4 lg:justify-evenly pt-4 py-3 md:flex-row">
+    <div className="w-full px-4 pt-10" id="services">
+      <h1 className="text-2xl font-bold  text-primary xl:pl-28">SERVICES</h1>
+      <div className="flex flex-col gap-2 lg:justify-around pt-4 py-3 md:flex-row">
         <div className="bg-lightdark p-5 xl:p-10 xl:w-[700px] xl:text-lg ">
           <h4 className="text-lg text-primary pb-2">Software Engineer</h4>
           <p>

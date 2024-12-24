@@ -58,17 +58,17 @@ const Project = () => {
 
   return (
     <div className="flex flex-col items-start  mt-28" id="projects">
-      <h3 className="mb-6 text-primary text-3xl font-semibold">
+      <h3 className="mb-6 pl-4 text-primary text-3xl font-semibold">
         PROJECTS
       </h3>
       <div className="relative flex items-center justify-center pb-10 md:m-auto">
-        <div className="flex overflow-hidden flex-wrap justify-center gap-6 w-full mx-4">
+        <div className="flex overflow-hidden flex-wrap justify-center gap-6 w-full ">
           {projects
             .slice(currentIndex, currentIndex + 6)
             .map((project, index) => (
               <div
                 key={index}
-                className="w-[450px] md:w-[70%] lg:w-[30%] max-h-[400px] flex flex-col relative bg-dark_blue mx-4 my-7 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:shadow-cyan-500/50 duration-300"
+                className="w-full md:w-[70%] lg:w-[30%] max-h-[400px] flex flex-col relative bg-dark_blue mx-4 my-7 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 hover:shadow-cyan-500/50 duration-300"
               >
                 <img
                   src={project.imgSrc}
