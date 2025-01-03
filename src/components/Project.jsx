@@ -6,6 +6,12 @@ const Project = () => {
 
   const projects = [
     {
+      imgSrc: "/devPulse.png",
+      title: "DevPulse",
+      siteLink: "https://atlp-devpulse-fn.vercel.app/",
+      codeLink: "#",
+    },
+    {
       imgSrc: "/crafters.png",
       title: "Crafters Online shop",
       siteLink: "https://crafter-shop.netlify.app/",
