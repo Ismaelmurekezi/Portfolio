@@ -6,12 +6,31 @@ const Projects = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
+
   const projects = [
+    {
+      imgSrc: "/AdminDashboard.png",
+      title: "IoT Early warning system",
+      siteLink: "https://ibhews.netlify.app/",
+      codeLink: "https://github.com/Ismaelmurekezi/ShieldUp-be.git",
+    },
     {
       imgSrc: "/crafters.png",
       title: "Crafters Online shop",
       siteLink: "https://crafter-shop.netlify.app/",
       codeLink: "#",
+    },
+    {
+      imgSrc: "/careercampus.png",
+      title: "Career Compass",
+      siteLink: "  https://career-comp.netlify.app/",
+      codeLink: "#",
+    },
+    {
+      imgSrc: "/trakit.png",
+      title: "Trakit",
+      siteLink: "  https://trakitapp.vercel.app/",
+      codeLink: "https://github.com/Ismaelmurekezi/Trakit_app.git",
     },
     {
       imgSrc: "/country-app.png",
