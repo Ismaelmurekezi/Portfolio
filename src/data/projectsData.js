@@ -1,32 +1,5 @@
 export const projectsData = [
   {
-    image: "/AdminDashboard.png",
-    title: "IoT Early warning system",
-    description:
-      "A full-featured e-commerce platform with shopping cart, payment integration, and admin dashboard. Built with modern web technologies for optimal performance.",
-    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Stripe"],
-    liveUrl: "https://ibhews.netlify.app/",
-    githubUrl: "https://github.com/Ismaelmurekezi/ShieldUp-be.git",
-  },
-  {
-    image: "/crafters.png",
-    title: "Crafters Online shop",
-    description:
-      "Collaborative task management application with real-time updates, team workspaces, and advanced filtering capabilities for productivity.",
-    technologies: ["Vue.js", "Firebase", "Tailwind CSS", "Vuex"],
-    liveUrl: "https://crafter-shop.netlify.app/",
-    githubUrl: "https://github.com/example/project",
-  },
-  {
-    image: "/careercampus.png",
-    title: "Career Compass",
-    description:
-      "This platform help high school students by recommending suitable career paths based on their skills, interests, and academic performance using AI. It provides personalized career assessments, resources, and guidance to empower students in making informed decisions about their future.",
-    technologies: ["React", "OpenWeather API", "Chart.js", "CSS3"],
-    liveUrl: "  https://career-comp.netlify.app/",
-    githubUrl: "#",
-  },
-  {
     image: "/admin saving management-app.png",
     title: "Admin Saving Management",
     description:
@@ -65,18 +38,39 @@ export const projectsData = [
     title: "IoT Early warning system",
     description:
       "This project is an IoT-based early warning system designed to monitor environmental conditions and provide timely alerts to prevent potential theft. It utilizes various sensors to collect data and a web application for real-time monitoring.",
-    technologies: [
-      "Flask",
-      "MongoDB",
-      "Mongoose",
-      "React.js",
-      "Tailwind CSS",
-    ],
+    technologies: ["Flask", "MongoDB", "Mongoose", "React.js", "Tailwind CSS"],
     liveUrl: " https://ibhews.netlify.app/",
     githubUrl: "https://github.com/Ismaelmurekezi/ShieldUp-be.git",
   },
   {
-    image: "/AdminDashboard.png",
+    image: "/careercampus.png",
+    title: "Career Compass",
+    description:
+      "This platform help high school students by recommending suitable career paths based on their skills, interests, and academic performance using AI. It provides personalized career assessments, resources, and guidance to empower students in making informed decisions about their future.",
+    technologies: ["React", "OpenWeather API", "Chart.js", "CSS3"],
+    liveUrl: "  https://career-comp.netlify.app/",
+    githubUrl: "#",
+  },
+  {
+    image: "/trakit.png",
+    title: "Trakit App",
+    description:
+      "This app is to youth to manage their budgets and expenses effectively. It allows users to track their income, set budgets, and monitor spending habits through an intuitive interface and insightful visualizations.",
+    technologies: ["Next.js", "Supabase", "Tailwind CSS"],
+    liveUrl: "https://trakitapp.vercel.app/",
+    githubUrl: "https://github.com/Ismaelmurekezi/Trakit_app.git",
+  },
+  {
+    image: "/devPulse.png",
+    title: "Dev Pulse",
+    description:
+      "This app help Andela to track their applicant from application to completion of program. It allow them to track trainee performance in all aspects including technical skills,discipline and professional skills",
+    technologies: ["Express.js","MongoDB", "GraphQL","React Js","Tailwind CSS"],
+    liveUrl: "",
+    githubUrl: "#",
+  },
+  {
+    image: "/crafters.png",
     title: "Crafters Online shop",
     description:
       "This is multi-vendor e-commerce platform that allows vendor to sell their product and customers to purchase from various sellers in one place.with features like product listing, shopping cart, payment integration, and order management.",
@@ -92,30 +86,6 @@ export const projectsData = [
     githubUrl: "#",
   },
   {
-    image: "/AdminDashboard.png",
-    title: "IoT Early warning system",
-    description:
-      "This project is an IoT-based early warning system designed to monitor environmental conditions and provide timely alerts to prevent potential theft. It utilizes various sensors to collect data and a web application for real-time monitoring.",
-    technologies: [
-      "Flask",
-      "MongoDB",
-      "Mongoose",
-      "React.js",
-      "Tailwind CSS",
-    ],
-    liveUrl: "https://ibhews.netlify.app",
-    githubUrl: "https://github.com/Ismaelmurekezi/ShieldUp-be.git",
-  },
-  {
-    image: "/trakit.png",
-    title: "Trakit App",
-    description:
-      "This app is to youth to manage their budgets and expenses effectively. It allows users to track their income, set budgets, and monitor spending habits through an intuitive interface and insightful visualizations.",
-    technologies: ["Next.js", "Supabase", "Tailwind CSS"],
-    liveUrl: "https://trakitapp.vercel.app/",
-    githubUrl: "https://github.com/Ismaelmurekezi/Trakit_app.git",
-  },
-  {
     image: "/weatherapp.png",
     title: "Weather App",
     description:
@@ -128,7 +98,7 @@ export const projectsData = [
     image: "/country-app.png",
     title: "Country App",
     description:
-      "This application implements user authentication using the MERN stack. It allows users to register, log in, and manage their sessions securely, utilizing JWT for token-based authentication and bcrypt for password hashing.",
+      "This app allow user to search for countries and view detailed information about them, including their capital, population, languages, and more. It utilizes the REST Countries API to fetch data dynamically. ",
     technologies: ["Javascript", "CSS", "REST Countries API"],
     liveUrl: "https://ismaelmurekezi.github.io/Countries-App/",
     githubUrl: "https://github.com/Ismaelmurekezi/Countries-App.git",
@@ -138,19 +108,13 @@ export const projectsData = [
     title: "Authentication Application",
     description:
       "This application implements user authentication using the MERN stack. It allows users to register, log in, and manage their sessions securely, utilizing JWT for token-based authentication and bcrypt for password hashing.",
-    technologies: [
-      "Express.js",
-      "MongoDB",
-      "React.js",
-      "JWT",
-      "tailwind CSS",
-    ],
+    technologies: ["Express.js", "MongoDB", "React.js", "JWT", "tailwind CSS"],
     liveUrl: "",
     githubUrl: "https://github.com/Ismaelmurekezi/Auth.git",
   },
   {
     image: "/calculator1.png",
-    title: "Callculator",
+    title: "Calculator",
     description:
       "This platform help employers to post jobs and job seekers to apply for jobs. It includes features such as job listings, application tracking, and user profiles to facilitate the hiring process.",
     technologies: ["JavaScript", "CSS"],
@@ -158,7 +122,7 @@ export const projectsData = [
     githubUrl: "https://github.com/Ismaelmurekezi/Calculator.git",
   },
   {
-    image: "/iwork.png",
+    image: "/Admin-dashboard.png",
     title: "Iwork Application",
     description:
       "This platform help employers to post jobs and job seekers to apply for jobs. It includes features such as job listings, application tracking, and user profiles to facilitate the hiring process.",
