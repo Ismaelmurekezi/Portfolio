@@ -1,50 +1,68 @@
-import React from "react";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ReactTyped } from "react-typed";
 
-const HeroSection = () => {
+const Hero = () => {
   return (
-    <div
-      className="flex flex-col md:flex-row justify-between px-32 items-center py-10"
-      id="home"
+    <section
+      className="relative h-[700px] bg-gradient-to-br from-lightdark via-cyan-950 to-black flex items-center justify-center overflow-hidden"
+      id="#home"
     >
-        <div className="w-96  md:w-[50%] flex flex-col items-center  text-center md:text-left md:items-start">
-          <p className="text-xl md:text-2xl">Hi, I'm </p>
-          <p className="text-primary text-3xl md:text-5xl font-semibold">
-            MUREKEZI Ismael
-          </p>
-          <p className="w-[80%] md:w-fit text-lg md:text-xl pb-7 px-4 md:px-0">
-            <span className="text-primary py-2">Software Developer</span>with a
-            passion for crafting engaging digital experiences through intuitive
-            UX/UI design and Robust server-side solutions.
-          </p>
-          <span className="text-primary text-lg md:text-xl">Get in touch</span>
-          <div className="flex justify-center md:justify-start gap-3 text-primary text-2xl md:text-4xl pt-4">
-            <a
-              href="https://www.linkedin.com/in/murekezi-ismael/"
-              className="group relative inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full hover:bg-white hover:bg-opacity-10 transition ease-in-out duration-300"
-            >
-              <i className="fab fa-linkedin group-hover:text-white transition ease-in-out duration-300"></i>
-            </a>
-            <a
-              href="https://github.com/Ismaelmurekezi"
-              className="group relative inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full hover:bg-white hover:bg-opacity-10 transition ease-in-out duration-300"
-            >
-              <i className="fab fa-github group-hover:text-white transition ease-in-out duration-300"></i>
-            </a>
-            <a
-              href="#"
-              className="group relative inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full hover:bg-white hover:bg-opacity-10 transition ease-in-out duration-300"
-            >
-              <i className="fab fa-twitter-square group-hover:text-white transition ease-in-out duration-300"></i>
-            </a>
-          </div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div
+          className="absolute bottom-20 right-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-3xl animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
+      </div>
+
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+          <ReactTyped
+            strings={["Software", "UI/UX"]}
+            typeSpeed={100}
+            backSpeed={50}
+            backDelay={2000}
+            loop
+          />
+          <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-500">
+            <ReactTyped
+              strings={["Developer", "Designer"]}
+              typeSpeed={100}
+              backSpeed={50}
+              backDelay={2000}
+              loop
+            />
+          </span>
+        </h1>
+
+        <p className="text-lg sm:text-xl text-white/90 max-w-2xl mx-auto mb-12 leading-relaxed">
+          Crafting beautiful, responsive web experiences that solve real
+          problems. Specialized in React, TypeScript, and modern web
+          technologies.
+        </p>
+
+        <div className="flex justify-center gap-6">
+          <a
+            href="https://github.com/Ismaelmurekezi"
+            className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 group"
+          >
+            <Github className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/murekezi-ismael"
+            className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 group"
+          >
+            <Linkedin className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+          </a>
+          <a
+            href="#"
+            className="p-3 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 group"
+          >
+            <Mail className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
+          </a>
         </div>
-        <img
-          src="./profile.png"
-          alt="my-image"
-          className="w-72 md:w-[20%] rounded-full transition ease-in-out duration-300 hover:shadow-primary mt-8 md:mt-0"
-        />
-    </div>
+      </div>
+    </section>
   );
 };
-
-export default HeroSection;
+export default Hero;
