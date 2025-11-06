@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const FORM_ID = import.meta.env.VITE_FORM_ID;
+console.log('FORM_ID:', FORM_ID);
 
 const Contact = () => {
   const messageSchema = yup.object().shape({
@@ -25,7 +26,8 @@ const Contact = () => {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch(`https://formcarry.com/s/${FORM_ID}`, {
+      console.log('Submitting to FormCarry:', data);
+      const response = await fetch(`https://formcarry.com/s/${import.meta.env.VITE_FORM_ID}`, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -34,11 +36,15 @@ const Contact = () => {
         body: JSON.stringify(data),
       });
 
+      const responseData = await response.json();
+      console.log('FormCarry response:', responseData);
+
       if (response.ok) {
         toast.success("Thanks, your message was sent successfully!");
         reset();
       } else {
-        toast.error("Failed to submit message");
+        console.error('FormCarry error:', responseData);
+        toast.error(`Failed to submit message: ${responseData.message || 'Unknown error'}`);
       }
     } catch (error) {
       console.error("Error:", error.message);
