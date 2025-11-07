@@ -16,27 +16,25 @@ const Contact = () => {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
   } = useForm({
     resolver: yupResolver(messageSchema),
   });
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch(
-        "https://my-brand-backend-ibtm.onrender.com/api/messages/createMessage",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+      const response = await fetch(`https://formcarry.com/s/uMj8SmL1c73`, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
       if (response.ok) {
         toast.success("Thanks, your message was sent successfully!");
-        reset()
+        reset();
       } else {
         toast.error("Failed to submit message");
       }
